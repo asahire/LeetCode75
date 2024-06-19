@@ -10,6 +10,7 @@
  */
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+        // recursion method
         // if(list1 == null)
         // {
         //     return list2;
@@ -31,6 +32,7 @@ class Solution {
         //     return list2;
         // }
 
+        // 2 pointer method
         ListNode dummyNode = new ListNode(0);
 
         ListNode tail = dummyNode;
