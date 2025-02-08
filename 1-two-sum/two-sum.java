@@ -17,10 +17,10 @@ class Solution {
        
         for(int i=0; i < nums.length; i++)
         {
-            int difference= target - nums[i];
-            if(map.containsKey(difference))
+            //int difference= target - nums[i];
+            if(map.containsKey(target - nums[i]))
             {
-                return new int[] { map.get(difference), i};
+                return new int[] { map.get(target - nums[i]), i};
             }
 
             // Store the current number and its index
