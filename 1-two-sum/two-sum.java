@@ -13,20 +13,21 @@ class Solution {
         //return null;
         
         // hashmap to store the difference between visited elements and target
-        HashMap<Integer, Integer> hm = new HashMap<>();
-         int difference;
+        HashMap<Integer, Integer> map = new HashMap<>();
+       
         for(int i=0; i < nums.length; i++)
         {
-           difference= target - nums[i];
-            if(hm.containsKey(nums[i]))
+            int difference= target - nums[i];
+            if(map.containsKey(difference))
             {
-                return new int[] { hm.get(nums[i]), i};
+                return new int[] { map.get(difference), i};
             }
-            else
-            {
-                hm.put(difference, i);
-            }
+
+            // Store the current number and its index
+            map.put(nums[i], i);
         }
-        return null;
+
+          // If no pair found, return an empty array or throw an exception
+        return new int[]{-1, -1};
     }
 }
