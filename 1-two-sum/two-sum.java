@@ -14,10 +14,10 @@ class Solution {
         
         // hashmap to store the difference between visited elements and target
         HashMap<Integer, Integer> hm = new HashMap<>();
-        
+         int difference;
         for(int i=0; i < nums.length; i++)
         {
-            int difference = target - nums[i];
+           difference= target - nums[i];
             if(hm.containsKey(nums[i]))
             {
                 return new int[] { hm.get(nums[i]), i};
