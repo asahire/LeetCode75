@@ -11,7 +11,8 @@ class Solution {
         // }
 
         //return null;
-        
+
+         System.gc();
         // hashmap to store the difference between visited elements and target
         HashMap<Integer, Integer> map = new HashMap<>();
        
