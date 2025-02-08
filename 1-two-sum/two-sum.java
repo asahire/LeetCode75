@@ -11,17 +11,16 @@ class Solution {
         // }
 
         //return null;
-
-        System.gc();
+        
         // hashmap to store the difference between visited elements and target
         HashMap<Integer, Integer> map = new HashMap<>();
        
         for(int i=0; i < nums.length; i++)
         {
-            //int difference= target - nums[i];
-            if(map.containsKey(target - nums[i]))
+            int difference= target - nums[i];
+            if(map.containsKey(difference))
             {
-                return new int[] { map.get(target - nums[i]), i};
+                return new int[] { map.get(difference), i};
             }
 
             // Store the current number and its index
