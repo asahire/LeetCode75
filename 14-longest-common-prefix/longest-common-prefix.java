@@ -2,7 +2,7 @@ class Solution {
     public String longestCommonPrefix(String[] strs) {
         if(strs == null || strs.length ==0) return "";
 
-        // // horizontal scanning
+        // // horizontal scanning   O(M * N)
         // String prefix = strs[0]; // assign first string as prefix
         
         // for(int i=1 ; i < strs.length; i++)
@@ -17,7 +17,7 @@ class Solution {
 
         // return prefix;
 
-        // we can use binary search for most efficient implementation
+        // we can use binary search for most efficient implementation. O(M * log n)
         int left = 0;
         int right = strs[0].length();
 
